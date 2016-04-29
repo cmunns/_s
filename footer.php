@@ -15,10 +15,16 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrap">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<div class="site-info text-center">
+				<div>
+					<a href="http://www.hoganassessments.com/"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/hogan_logo_black.png'?>"/></a>
+				</div>
+				<p>© 2016 Hogan Assessment Systems Inc.
+					<br>
+					<a href="http://www.hoganassessments.com/?q=content/privacy-policy">Privacy Policy</a>
+					<span class="sep"> | </span>
+					<a href="http://www.hoganassessments.com/?q=content/legal-policy">Legal Policy</a>
+				</p>
 			</div><!-- .site-info -->
 		</div>
 	</footer><!-- #colophon -->
