@@ -39,4 +39,12 @@
 			}
 		} );
 	} );
+
+	wp.customize( 'content_max_width', function( value ) {
+		value.bind( function( to ) {
+			$( '.site' ).css( {
+                'width': to+'px'
+            } );
+		} );
+	} );
 } )( jQuery );

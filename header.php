@@ -22,6 +22,10 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	<?php
+	$value = get_option( 'content_max_width', '1080' );
+	echo $value;
+	?>
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
