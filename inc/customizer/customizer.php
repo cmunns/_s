@@ -56,4 +56,5 @@ _s_Kirki::add_section( 'header', array(
 
 require get_template_directory() . '/inc/customizer/settings-typography.php';
 require get_template_directory() . '/inc/customizer/settings-header.php';
+require get_template_directory() . '/inc/customizer/settings-background.php';
 require get_template_directory() . '/inc/customizer/settings-layout.php';

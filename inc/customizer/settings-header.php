@@ -24,7 +24,7 @@ _s_Kirki::add_field( '_s_theme', array(
 ) );
 
 
-Kirki::add_field( '_s_theme', array(
+_s_Kirki::add_field( '_s_theme', array(
 	'type'        => 'slider',
 	'settings'    => 'site_content_padding_top',
 	'label'       => esc_html__( 'Site Content Spacer', '_s_theme' ),
@@ -55,7 +55,7 @@ Kirki::add_field( '_s_theme', array(
 ));
 
 
-Kirki::add_field( '_s_theme', array(
+_s_Kirki::add_field( '_s_theme', array(
 	'type'        => 'slider',
 	'settings'    => 'site_header_padding',
 	'label'       => esc_html__( 'Header Padding', '_s_theme' ),

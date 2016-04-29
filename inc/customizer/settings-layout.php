@@ -1,5 +1,5 @@
 <?php
-Kirki::add_field( '_s_theme', array(
+_s_Kirki::add_field( '_s_theme', array(
 	'type'        => 'slider',
 	'settings'    => 'content_max_width',
 	'label'       => esc_html__( 'Maximum Content Width', '_s_theme' ),
@@ -36,7 +36,7 @@ _s_Kirki::add_field( '_s_theme', array(
 	'priority'    => 10,
 ) );
 
-Kirki::add_field( '_s_theme', array(
+_s_Kirki::add_field( '_s_theme', array(
 	'type'        => 'slider',
 	'settings'    => 'site_padding',
 	'label'       => esc_html__( 'Site Gutter Width', '_s_theme' ),
