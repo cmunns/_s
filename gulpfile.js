@@ -19,20 +19,19 @@ var mainBowerFiles = require('main-bower-files');
 // ==========
 
     gulp.task('styles', function() {
-        gulp.src('assets/sass/**/*.scss')
-            .pipe(sourcemaps.init())
+        gulp.src('assets/sass/style.scss')
             .pipe(sass({
                 style: 'expanded',
                 errLogToConsole: true
             }))
             .pipe(rucksack())
-            .pipe(sourcemaps.write())
-            .pipe(gulp.dest(''))
-            .pipe(rename({ basename: "style" }))
+            .pipe(sourcemaps.init())
             .pipe(cleanCSS())
-            .pipe(gulp.dest('css/'))
-            .pipe(notify({ message: 'Styles task complete' }))
-            .pipe(browserSync.reload({stream:true}));
+            .pipe(sourcemaps.write())
+            .pipe(rename({ basename: 'style' }))
+            .pipe(gulp.dest(''))
+            .pipe(browserSync.stream())
+            .pipe(notify({ message: 'Styles task complete' }));
     });
 
 
@@ -81,11 +80,10 @@ var mainBowerFiles = require('main-bower-files');
 // = WATCH =
 // =========
 
-    gulp.task('watch', function() {
+    gulp.task('watch', ['styles'], function() {
 
         browserSync.init({
             proxy: "hoganmicro.wp",
-            port: 6000
         });
 
         // Watch .scss files

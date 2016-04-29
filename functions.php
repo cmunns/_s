@@ -35,6 +35,8 @@ function _s_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
+	add_theme_support( 'custom-logo' );
+	add_theme_support( 'header-text' );
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
