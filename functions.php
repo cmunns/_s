@@ -117,6 +117,7 @@ add_action( 'widgets_init', '_s_widgets_init' );
  */
 function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+	wp_enqueue_script( '_s-script', get_stylesheet_directory_uri().'/build/scripts/main.min.js', array('jquery'), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
@@ -135,6 +136,12 @@ require get_template_directory() . '/inc/custom-header.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom filters for this gravity-forms.
+ */
+require get_template_directory() . '/inc/gravity-forms.php';
+
 
 /**
  * Custom functions that act independently of the theme templates.
