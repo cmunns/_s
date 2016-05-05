@@ -53,11 +53,13 @@ _s_Kirki::add_field( '_s_theme', array(
 			'element'  => '.wrap',
 			'property' => 'padding-left',
 			'units'    => 'px',
+			'suffix'   => '!important'
 		),
 		array(
 			'element'  => '.wrap',
 			'property' => 'padding-right',
 			'units'    => 'px',
+			'suffix'   => '!important'
 		),
 	),
 	'transport'   => 'postMessage',
@@ -66,13 +68,15 @@ _s_Kirki::add_field( '_s_theme', array(
 			'element'  => '.wrap',
 			'function' => 'css',
 			'property' => 'padding-left',
-			'units' => 'px'
+			'units' => 'px',
+			'suffix'   => '!important'
 		),
 		array(
 			'element'  => '.wrap',
 			'function' => 'css',
 			'property' => 'padding-right',
-			'units' => 'px'
+			'units' => 'px',
+			'suffix'   => '!important'
 		),
 	)
 ));
