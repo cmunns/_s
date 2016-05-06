@@ -54,7 +54,14 @@ _s_Kirki::add_section( 'header', array(
 	'capability' => 'edit_theme_options',
 ) );
 
+_s_Kirki::add_section( 'forms', array(
+	'title'      => esc_attr__( 'Forms', '_s' ),
+	'priority'   => 35,
+	'capability' => 'edit_theme_options',
+) );
+
 require get_template_directory() . '/inc/customizer/settings-typography.php';
 require get_template_directory() . '/inc/customizer/settings-header.php';
 require get_template_directory() . '/inc/customizer/settings-background.php';
 require get_template_directory() . '/inc/customizer/settings-layout.php';
+require get_template_directory() . '/inc/customizer/settings-forms.php';
