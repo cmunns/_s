@@ -43,8 +43,18 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				<?php
+				$primary_menu = wp_nav_menu(array(
+					'echo' => false,
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu'
+					));
+				$menu_items = substr_count($primary_menu,'class="menu-item ');
+				if( $menu_items > 0 ) {
+					echo '<button class="menu-toggle button" aria-controls="primary-menu" aria-expanded="false">Menu</button>';
+					echo $primary_menu;
+				}
+				?>
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
