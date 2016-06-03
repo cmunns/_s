@@ -154,7 +154,7 @@ _s_Kirki::add_field( '_s_theme', array(
 _s_Kirki::add_field( '_s_theme', array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'header_nav_li_position',
-	'label'       => __( 'Nav Position', '_s_theme' ),
+	'label'       => __( 'Nav Flow', '_s_theme' ),
 	'section'     => 'header',
 	'default'     => 'left',
 	'priority'    => 10,
@@ -177,5 +177,6 @@ _s_Kirki::add_field( '_s_theme', array(
 		),
 	)
 ) );
+
 
 ?>

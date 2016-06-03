@@ -20,7 +20,24 @@
 <?php wp_head(); ?>
 </head>
 
+<?php
+$primary_menu = wp_nav_menu(array(
+	'echo' => false,
+	'theme_location' => 'primary',
+	'menu_id' => 'primary-menu'
+	));
+$menu_items = substr_count($primary_menu,'class="menu-item ');
+?>
+
 <body <?php body_class(); ?>>
+<div id="mobile-nav">
+	<?php echo $primary_menu;?>
+</div>
+<?php
+if( $menu_items > 0 ) {
+	echo '<button class="menu-toggle mobile-nav-toggle button" aria-controls="primary-menu" aria-expanded="false"><span></span><span></span><span></span><span></span></button>';
+}
+?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrap clear">
@@ -44,19 +61,13 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
-				$primary_menu = wp_nav_menu(array(
-					'echo' => false,
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu'
-					));
-				$menu_items = substr_count($primary_menu,'class="menu-item ');
 				if( $menu_items > 0 ) {
-					echo '<button class="menu-toggle button" aria-controls="primary-menu" aria-expanded="false">Menu</button>';
 					echo $primary_menu;
 				}
 				?>
 			</nav><!-- #site-navigation -->
 		</div>
+
 	</header><!-- #masthead -->
 
 	<?php $wrap_content_bool = get_theme_mod( 'wrap_main_content_bool', true ); ?>
